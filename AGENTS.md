@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Company content (facts, divisions, products, certifications, contacts) lives only in `src/lib/site.ts`; pages read from it so facts stay consistent and verifiable against magnaprocessing.com.
+- All imagery is registered in `src/lib/images.ts` with a `source` of `magna` (own facility photo) or `illustrative`; images render through `SiteImage`/`PageHero`, which label them, so representative photos are never presented as Magna's facility.
+- Division and product detail pages are data-driven dynamic routes (`divisions.$slug.tsx`, `products.$slug.tsx`) that throw `notFound()` for unknown slugs.
+- The contact form has no backend: it validates with `src/lib/inquiry.ts`, shows a clearly labelled demo state, and offers a prefilled mailto — never claim delivery until a real email integration is added.
+- Scroll reveals use the IntersectionObserver `Reveal` component and CSS utilities in `src/styles.css` (no animation library) and respect reduced motion.

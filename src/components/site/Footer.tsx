@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="weave-texture bg-navy-deep text-on-dark">
       <div className="container-site pt-20 pb-10">
         <div className="grid gap-14 border-b border-line-dark pb-16 md:grid-cols-2 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <Logo tone="light" />
             <p className="serif-accent mt-8 text-2xl text-copper-soft">{company.tagline}</p>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-on-dark-muted">
@@ -59,7 +59,7 @@ export function Footer() {
             ))}
           </FooterCol>
 
-          <FooterCol title="Contact" className="lg:col-span-2">
+          <FooterCol title="Contact" className="lg:col-span-3">
             <li className="flex gap-3 text-sm text-on-dark-muted">
               <MapPin className="mt-0.5 size-4 shrink-0 text-copper" aria-hidden="true" />
               <a href={company.mapsUrl} target="_blank" rel="noreferrer" className="hover:text-on-dark">

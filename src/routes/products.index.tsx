@@ -84,7 +84,7 @@ function ProductsPage() {
         <div className="container-site grid gap-8 py-14 md:grid-cols-3">
           {[
             ["Made to specification", "Constructions, finishes and packaging built around buyer requirements."],
-            ["No minimum guesswork", "Discuss volumes and lead times directly with our merchandising team."],
+            ["Direct merchandising support", "Discuss volumes and lead times directly with our merchandising team."],
             ["Tested before dispatch", "In-house laboratory testing for pilling, rubbing, crocking and shrinkage."],
           ].map(([t, x]) => (
             <div key={t} className="border-l border-copper pl-6">

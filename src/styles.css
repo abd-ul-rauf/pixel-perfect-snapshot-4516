@@ -164,6 +164,13 @@
     letter-spacing: -0.025em;
   }
 
+  input,
+  select,
+  textarea,
+  [id] {
+    scroll-margin-top: 7rem;
+  }
+
   ::selection {
     background: var(--copper);
     color: oklch(1 0 0);

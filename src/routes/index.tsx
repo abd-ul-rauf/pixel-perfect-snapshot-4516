@@ -107,15 +107,15 @@ function Hero() {
                 key={d.slug}
                 className={cn(
                   "border-line-dark",
-                  i % 2 === 1 && "border-l",
+                  i % 2 === 1 ? "border-l pl-4 md:pl-6" : "pr-4 md:pr-6",
                   i >= 2 && "border-t md:border-t-0",
-                  i === 2 && "md:border-l",
+                  i === 2 && "md:border-l md:pl-6",
                 )}
               >
                 <Link
                   to="/divisions/$slug"
                   params={{ slug: d.slug }}
-                  className="group flex items-center justify-between gap-3 px-1 py-5 transition-colors hover:text-copper-soft md:px-6 md:first:pl-0"
+                  className="group flex items-center justify-between gap-3 py-5 transition-colors hover:text-copper-soft"
                 >
                   <span className="flex items-baseline gap-3">
                     <span className="text-[0.65rem] text-copper">{d.number}</span>
@@ -198,8 +198,8 @@ function Heritage() {
 }
 
 const stats = [
-  { node: <CountUp value={1965} format={(n) => String(n)} />, label: "Year established" },
-  { node: <CountUp value={1990} format={(n) => String(n)} />, label: "Exporting since" },
+  { node: "1965", label: "Year established" },
+  { node: "1990", label: "Exporting since" },
   { node: <CountUp value={5} suffix="M+" />, label: "Meters of fabric processed monthly" },
   { node: <CountUp value={15000} />, label: "Sheet sets stitching capacity per day" },
 ];
