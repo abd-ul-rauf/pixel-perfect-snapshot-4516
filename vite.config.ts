@@ -15,4 +15,18 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    // Pre-bundle UI deps at startup so Vite never re-optimizes mid-session, which can leave
+    // the open preview with two React copies ("Cannot read properties of null (reading 'useCallback')").
+    optimizeDeps: {
+      include: [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "lucide-react",
+        "zod",
+      ],
+    },
+  },
 });

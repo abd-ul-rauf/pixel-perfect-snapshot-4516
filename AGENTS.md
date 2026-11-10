@@ -36,3 +36,4 @@ use the editor.
 - Division and product detail pages are data-driven dynamic routes (`divisions.$slug.tsx`, `products.$slug.tsx`) that throw `notFound()` for unknown slugs.
 - The contact form has no backend: it validates with `src/lib/inquiry.ts`, shows a clearly labelled demo state, and offers a prefilled mailto — never claim delivery until a real email integration is added.
 - Scroll reveals use the IntersectionObserver `Reveal` component and CSS utilities in `src/styles.css` (no animation library) and respect reduced motion.
+- Vite pre-bundles the shared UI dependencies via `optimizeDeps.include` in `vite.config.ts`; a mid-session re-optimization otherwise loads two React copies and blanks the preview.
